@@ -15,6 +15,12 @@ public class EmemyManager {
     }
 
     public void add(String name) {
+        if (name.isEmpty()) {
+            return;
+        }
+        if (Ememy.with(name)) {
+            return;
+        }
         ememies.add(new Ememy(name));
         Config.save();
 
