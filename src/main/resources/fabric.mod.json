@@ -3,12 +3,12 @@
 	"id": "ememymod",
 	"version": "${version}",
 	"name": "ememymod",
-	"description": "goob",
+	"description": "Get notified when your §cEmemies§r join the server. (Or enter the render distance)",
 	"authors": [
 		"Ceptea"
 	],
 	"contact": {
-		"homepage": "https://ceptea.xyz/"
+		"sources": "https://github.com/Ceptea/EmemyMod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/ememymod/icon.png",
