@@ -47,11 +47,12 @@ public class DataPlayers {
                     if (Ememy.with(dataPlayer.getName())) {
                         Chat.send(String.format("&c%s entered your render distance.",
                                 dataPlayer.getName()));
+                        var master = PositionedSoundInstance.master(SoundEvents.BLOCK_NOTE_BLOCK_BELL, 1.0F);
+                        AccessorSoundInstance vol = (AccessorSoundInstance) master;
+                        vol.setVolume(2500);
+                        mc.getSoundManager().play(master);
                     }
-                    var master = PositionedSoundInstance.master(SoundEvents.BLOCK_NOTE_BLOCK_BELL, 1.0F);
-                    AccessorSoundInstance vol = (AccessorSoundInstance) master;
-                    vol.setVolume(2500);
-                    mc.getSoundManager().play(master);
+
                 } else {
                     if (Ememy.with(dataPlayer.getName())) {
                         Chat.send(String.format("&c%s left your render distance.",

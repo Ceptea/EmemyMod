@@ -21,11 +21,12 @@ public class DataPlayer {
             if (Ememy.with(this.getName())) {
                 Chat.send(String.format("&c%s entered your render distance.",
                         this.getName()));
+                var master = PositionedSoundInstance.master(SoundEvents.BLOCK_NOTE_BLOCK_BELL, 1.0F);
+                AccessorSoundInstance vol = (AccessorSoundInstance) master;
+                vol.setVolume(2500);
+                mc.getSoundManager().play(master);
             }
-            var master = PositionedSoundInstance.master(SoundEvents.BLOCK_NOTE_BLOCK_BELL, 1.0F);
-            AccessorSoundInstance vol = (AccessorSoundInstance) master;
-            vol.setVolume(2500);
-            mc.getSoundManager().play(master);
+
         }
 
     }
